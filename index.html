@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>MVL Challenge</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/boostrap.min.css">
+
+    <style>
+        a {
+            font-weight: bold;
+        }
+    </style>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="row" style="background-image: url('img/bg.gif'); padding-top: 8%; padding-bottom: 8%;">
+        <h1 class="col-md-12 text-center">
+            <b style="color: white;">Multi-View Layout Challenge</b></br>
+            <small style="color: white;">
+                in conjunction with CVPR'2023
+            </small>
+        </h1>
+    </div>
+
+    <div class="container" id="main">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    We introduce the first multi-view layout estimation challenge, where the goal is to encourage the community to develop solutions for room layout estimation by using only sequences of registered 360-images as unique input.
+                </p>
+                <p class="text-justify">
+                    Unlike most existing layout estimation datasets, our challenge provides abundant multi-view images rendered through simulators. In addition, our challenge contains more complex scenes with larger rooms, more rooms per scene, and more non-Manhattan spaces.
+                </p>
+                <p class="text-justify">
+                    This challenge is part of the <a href="https://sites.google.com/view/omnicv2022">Omnidirectional Computer Vision</a> workshop at <a href="https://cvpr2023.thecvf.com/">CVPR'2023</a>.
+                </p>
+                <img width="500" height="500" src="https://evalai.s3.amazonaws.com/media/logos/139ecc86-5393-4535-b564-3cfdfc6a4877.jpg " class="img-responsive center-block" alt="overview">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Dataset
+                </h3>
+                <p class="text-justify">
+                    We include the following two datasets in this competition.
+                </p>
+                <ul>
+                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://arxiv.org/abs/2112.06180">360-DFPE</a> for the purpose of floor plan estimation. MP3D-FPE contains 50 scenes and 687 rooms in total. For each scene, it provides the
+                        point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation. In this competition, we include 20k samples in training set and 2.2k in the challenge set.
+                    </li>
+                    <li><b>HM3D-MVL</b> is a newly collected dataset using the
+                        <a href="https://aihabitat.org/">Habitat</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements. Our competition contains 20k samples in training set and 2.2k in the challenge
+                        set.
+                    </li>
+                </ul>
+                <p class="text-justify">
+                    We provide a <a href="">toolkit</a> to make data processing easier. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Challenge
+                </h3>
+                <ul>
+                    <li>Our competition will be held in
+                        <a href="https://eval.ai/">EvalAI</a>.</li>
+                    <li>
+                        Participants will have access to three sets of data: training, warm-up, and challenge set. All sets will be provided in the form of multiple 360-images per room, registered by camera poses, but without layout annotations.
+                    </li>
+                    <li>We will release the warm-up set (about 1% of the challenge set) and the baseline, <a href="https://arxiv.org/abs/2210.12935">360-MLC</a>, along with the competition, while the challenge set will be released later in the test phase.</li>
+                    <li>The winner will be selected by the best average score evaluated on the challenge set. For more details please refer to <a href="#evaluation">Evaluation</a>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Rules
+                </h3>
+                <ul>
+                    <li>To participate in the competition, individuals and teams (unlimited size) should fill out this <a href="">form</a> for registration.
+                        <li>Anyone can access the dataset and competition, but only those registered can participate and receive rewards.</li>
+                        <li>Limit of 10 submissions per day and 100 submissions in total per person/team.</li>
+                        <li>External data, freely and publicly available, is allowed, including pre-trained models.</li>
+                        <li>There are no limits on training time or network capacity.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Timeline
+                </h3>
+                <ul>
+                    <li>Competition Release - <b>April 20, 2023</b></li>
+                    <li>Test Phase Open - <b>June 3, 2023.</b></li>
+                    <li>Test Phase Deadline - <b>June 5, 2023</b></li>
+                    <li>Winner informed - <b>June 6, 2023</b></li>
+                    <li>Winner presentation - <b>June 18 or 19, 2023</b></li>
+                    <li>All deadlines are at 11:59 PM UTC on the corresponding day unless otherwise noted. The competition organizers reserve the right to update the contest timeline if they deem it necessary.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Community
+                </h3>
+                Join our <a href="">Slack workspace</a> for public queries and discussion, for private queries, please send an email to <br>
+                <span style="font-family: 'Courier New', monospace;">vslab360[at]gmail[dot]com</span>
+            </div>
+        </div>
+
+        <br>
+
+    </div>
+</body>
+
+</html>
