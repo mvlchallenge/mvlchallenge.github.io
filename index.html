@@ -93,16 +93,23 @@
                     We include the following two datasets in this competition.
                 </p>
                 <ul>
-                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://arxiv.org/abs/2112.06180">[1] 360-DFPE</a> for the purpose of floor plan estimation. MP3D-FPE contains 50 scenes and 687 rooms in total. For each scene, it provides
-                        the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation. In this competition, we include 20k samples in training set and 2.2k in the challenge set.
+                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://arxiv.org/abs/2112.06180">[1] 360-DFPE</a> with 50 scenes and 687 rooms in total.
+                    <!-- for the purpose of floor plan estimation.  MP3D-FPE contains 50 scenes and 687 rooms in total.   -->
+                    <!-- For each scene, it provides the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation.  -->
+                        For this competition, only RGB images together with its registered camera poses are released. 
+                        In total, we include 20k and 2.2k samples for training and testing (challenge set), respectively.
                     </li>
                     <li><b>HM3D-MVL</b> is a newly collected dataset using the
-                        <a href="https://aihabitat.org/">[2] Habitat</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements. Our competition contains 20k samples in training set and 2.2k in the
+                        <a href="https://aihabitat.org/">[2] Habitat</a> simulator. 
+                        Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements and challenging room scenes. 
+                        Our competition contains 20k samples in training set and 2.2k in the
                         challenge set.
                     </li>
                 </ul>
                 <p class="text-justify">
-                    We provide a <a href="">toolkit</a> to make data processing easier. </p>
+                    We provide a <a href="">toolkit</a> to make data processing easier, allowing participants to 
+                    download and use dataset splits, register frames by camera poses, and format 
+                    the layout estimation results for the challenge submission.</p>
             </div>
         </div>
 
@@ -117,7 +124,10 @@
                     <li>
                         Participants will have access to three sets of data: training, warm-up, and challenge set. All sets will be provided in the form of multiple 360-images per room, registered by camera poses, but without layout annotations.
                     </li>
-                    <li>We will release the warm-up set (about 1% of the challenge set) and the baseline, <a href="https://arxiv.org/abs/2210.12935">[3] 360-MLC</a>, along with the competition, while the challenge set will be released later in the test phase.</li>
+                    <!-- <li>We will release the warm-up set (about 1% of the challenge set) and the baseline, <a href="https://arxiv.org/abs/2210.12935">[3] 360-MLC</a>, along with the competition, while the challenge set will be released later in the test phase.</li> -->
+                    <li>The warm-up set is composed of 1% of the challenge set. This set will be released for evaluation with unlimited number of submissions.
+                    <li>The challenge set will be released later in the Challenge Phase Open.</li> 
+                    <li>We release and evaluate the <a href="https://arxiv.org/abs/2210.12935">[3] 360-MLC</a> as baseline along with the competition. </li> 
                     <li>The winner will be selected by the best average score evaluated on the challenge set. For more details please refer to <a href="#evaluation">Evaluation</a>.</li>
                 </ul>
             </div>
@@ -129,9 +139,10 @@
                     Rules
                 </h3>
                 <ul>
-                    <li>To participate in the competition, individuals and teams (unlimited size) should fill out this <a href="">form</a> for registration.
-                        <li>Anyone can access the dataset and competition, but only those registered can participate and receive rewards.</li>
-                        <li>Limit of 10 submissions per day and 100 submissions in total per person/team.</li>
+                    <li>To participate in the competition, individuals and teams (unlimited size) should fill out this registration <a href="">form</a>.
+                        <li>Anyone can access the datasets and competition, but only those registered can participate to receive the official award at the <a href="https://sites.google.com/view/omnicv2022"> CVPR23 OmniCV workshop</a>.</li>
+                        <li>In total, each person/team is limited up to 10 submissions per day during the challenge period.</li>
+                        <li>Each person/team has unlimited number of submission using the warm-up set.</li>
                         <li>External data, freely and publicly available, is allowed, including pre-trained models.</li>
                         <li>There are no limits on training time or network capacity.</li>
                 </ul>
@@ -144,11 +155,12 @@
                     Timeline
                 </h3>
                 <ul>
-                    <li>Competition Release - <b>April 20, 2023</b></li>
-                    <li>Test Phase Open - <b>June 3, 2023.</b></li>
-                    <li>Test Phase Deadline - <b>June 5, 2023</b></li>
+                    <li>Competition Release - <b>March 20, 2023</b></li>
+                    <li>Warm-up Phase Open - <b>March 20, 2023</b></li>
+                    <li>Challenge Phase Open - <b>April 3, 2023.</b></li>
+                    <li>Challenge Phase Deadline - <b>June 3, 2023</b></li>
                     <li>Winner informed - <b>June 6, 2023</b></li>
-                    <li>Winner presentation - <b>June 18 or 19, 2023</b></li>
+                    <li>Winner presentation - <b>June 19, 2023</b></li>
                     <li>All deadlines are at 11:59 PM UTC on the corresponding day unless otherwise noted. The competition organizers reserve the right to update the contest timeline if they deem it necessary.</li>
                 </ul>
             </div>
