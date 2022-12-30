@@ -17,6 +17,22 @@
         a {
             font-weight: bold;
         }
+        
+        ol {
+            counter-reset: list;
+        }
+        
+        ol>li {
+            list-style: none;
+            position: relative;
+        }
+        
+        ol>li:before {
+            counter-increment: list;
+            content: "[" counter(list) "] ";
+            position: absolute;
+            left: -1.4em;
+        }
     </style>
 
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
@@ -44,7 +60,7 @@
         <h1 class="col-md-12 text-center">
             <b style="color: white;">Multi-View Layout Challenge</b></br>
             <small style="color: white;">
-                in conjunction with CVPR'2023
+                in conjunction with CVPR'23 OmniCV Workshop
             </small>
         </h1>
     </div>
@@ -62,7 +78,7 @@
                     Unlike most existing layout estimation datasets, our challenge provides abundant multi-view images rendered through simulators. In addition, our challenge contains more complex scenes with larger rooms, more rooms per scene, and more non-Manhattan spaces.
                 </p>
                 <p class="text-justify">
-                    This challenge is part of the <a href="https://sites.google.com/view/omnicv2022">Omnidirectional Computer Vision</a> workshop at <a href="https://cvpr2023.thecvf.com/">CVPR'2023</a>.
+                    This challenge is part of the <a href="https://sites.google.com/view/omnicv2022">Omnidirectional Computer Vision (OmniCV)</a> workshop at <a href="https://cvpr2023.thecvf.com/">CVPR'23</a>.
                 </p>
                 <img width="500" height="500" src="https://evalai.s3.amazonaws.com/media/logos/139ecc86-5393-4535-b564-3cfdfc6a4877.jpg" class="img-responsive center-block" alt="overview">
             </div>
@@ -77,12 +93,12 @@
                     We include the following two datasets in this competition.
                 </p>
                 <ul>
-                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://arxiv.org/abs/2112.06180">360-DFPE</a> for the purpose of floor plan estimation. MP3D-FPE contains 50 scenes and 687 rooms in total. For each scene, it provides the
-                        point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation. In this competition, we include 20k samples in training set and 2.2k in the challenge set.
+                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://arxiv.org/abs/2112.06180">[1] 360-DFPE</a> for the purpose of floor plan estimation. MP3D-FPE contains 50 scenes and 687 rooms in total. For each scene, it provides
+                        the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation. In this competition, we include 20k samples in training set and 2.2k in the challenge set.
                     </li>
                     <li><b>HM3D-MVL</b> is a newly collected dataset using the
-                        <a href="https://aihabitat.org/">Habitat</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements. Our competition contains 20k samples in training set and 2.2k in the challenge
-                        set.
+                        <a href="https://aihabitat.org/">[2] Habitat</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements. Our competition contains 20k samples in training set and 2.2k in the
+                        challenge set.
                     </li>
                 </ul>
                 <p class="text-justify">
@@ -101,7 +117,7 @@
                     <li>
                         Participants will have access to three sets of data: training, warm-up, and challenge set. All sets will be provided in the form of multiple 360-images per room, registered by camera poses, but without layout annotations.
                     </li>
-                    <li>We will release the warm-up set (about 1% of the challenge set) and the baseline, <a href="https://arxiv.org/abs/2210.12935">360-MLC</a>, along with the competition, while the challenge set will be released later in the test phase.</li>
+                    <li>We will release the warm-up set (about 1% of the challenge set) and the baseline, <a href="https://arxiv.org/abs/2210.12935">[3] 360-MLC</a>, along with the competition, while the challenge set will be released later in the test phase.</li>
                     <li>The winner will be selected by the best average score evaluated on the challenge set. For more details please refer to <a href="#evaluation">Evaluation</a>.</li>
                 </ul>
             </div>
@@ -145,6 +161,25 @@
                 </h3>
                 Join our <a href="">Slack workspace</a> for public queries and discussion, for private queries, please send an email to <br>
                 <span style="font-family: 'Courier New', monospace;">vslab360[at]gmail[dot]com</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    References
+                </h3>
+                <ol>
+                    <li>
+                        Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging Monocular 360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters, 2022.
+                    </li>
+                    <li>
+                        Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D. Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF International Conference on Computer Vision, 2019.
+                    </li>
+                    <li>
+                        Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural Information Processing Systems, 2022.
+                    </li>
+                </ol>
             </div>
         </div>
 
