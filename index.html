@@ -69,19 +69,66 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Abstract
+                    About this challenge
                 </h3>
                 <p class="text-justify">
-                    We introduce the first multi-view layout estimation challenge, where the goal is to encourage the community to develop solutions for room layout estimation which only use sequences of registered 360-images as unique input.
+                    We introduce the first multi-view layout estimation challenge,
+                    where the goal is to encourage the community to develop solutions for room layout estimation 
+                    which only use sequences of registered 360-images as unique input.
                 </p>
                 <p class="text-justify">
-                    Unlike most existing layout estimation datasets, our challenge provides abundant multi-view images within more complex scenes with larger rooms, more rooms per scene, and more non-Manhattan spaces, which brings new challenges for room layout estimation.
+                    Unlike most existing layout datasets 
+                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
+                    <a href="https://github.com/zillow/zind"> Zillow [5]</a>,
+                    this challenge provides abundant multi-view images within more complex scenes with larger rooms, 
+                    more rooms per scene, and more non-Manhattan spaces, 
+                    which brings new challenges for room layout estimation.
                 </p>
 
                 <p class="text-justify">
                     This challenge is part of the <a href="https://sites.google.com/view/omnicv2023/home?authuser=0">Omnidirectional Computer Vision (OmniCV)</a> workshop at <a href="https://cvpr2023.thecvf.com/">CVPR'23</a>.
                 </p>
                 <img width="500" height="500" src="img/mvl.gif" class="img-responsive center-block" alt="overview">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Why multi-view for layout estimation?
+                </h3>
+                <p class="text-justify">
+                    Using a multi-view setting offers an accessible and intuitive 
+                    constraint that has been broadly used in many Computer Vision solutions 
+                    like <a href="https://colmap.github.io/">SfM (COLMAP)[6]</a>, and
+                    SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[5]</a>, among others.
+                    Still, its use for room layout estimation has been lightly explored until now, i.e., multiple layout estimates from a different position (in the same scene)
+                    must define and complement the same underlined room geometry.
+                </p>
+                <p class="text-justify">
+                    Recently, approaches like 
+                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
+                    <a href="https://arxiv.org/abs/2210.11419"> [9]</a>
+                    explore around the multi-view idea for layout estimation,
+                    proposing important concept like layout Co-visibility which deals
+                    with geometry occlusions in a end-to-end formulation. 
+                    However, they fall short by considering only a pair of images. 
+                    Solution like <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC [3]</a>
+                    aims to leverage N-multiple views without using any label annotation.
+                    However, it needs to pre-process all views in advance before to leverage the multi-view constraint. 
+                    <!-- Lastly, the current largest datasets for layout estimation
+                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
+                    <a href="https://github.com/zillow/zind"> Zillow [5]</a>, present a few views per rooms only, 
+                    without drastic camera movements, with a few non-Manhattan scenes and non-horizontal ceilings, 
+                    which restraint important challenges for estimating a room layout in real-world applications. -->
+                    Lastly, the current most extensive datasets for layout estimation 
+                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
+                    <a href="https://github.com/zillow/zind"> Zillow [5]</a>, 
+                    present only a few views per room, without drastic camera movements, with a few scenes with non-Manhattan and non-horizontal ceiling architectures.
+                </p>
+                <p class="text-justify">
+                    We believe there is still many unseen solutions towards to estimating room layout geometry robustly.
+                </p>
             </div>
         </div>
 
@@ -187,13 +234,48 @@
                 </h3>
                 <ol>
                     <li>
-                        Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging Monocular 360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters, 2022.
+                        <a href="https://github.com/EnriqueSolarte/direct_360_FPE">
+                            Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging Monocular 360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters, 2022.
+                        </a>
                     </li>
                     <li>
-                        Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D. Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF International Conference on Computer Vision, 2019.
+                        <a href="https://aihabitat.org/"> 
+                            Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D. Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF International Conference on Computer Vision, 2019.
+                        </a>
                     </li>
                     <li>
-                        Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural Information Processing Systems, 2022.
+                        <a href="https://enriquesolarte.github.io/360-mlc/"> 
+                            Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural Information Processing Systems, 2022.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> 
+                            Zou, Chuhang, et al. "Manhattan Room Layout Reconstruction from a Single 360 ∘ 360∘ Image: A Comparative Study of State-of-the-Art Methods." International Journal of Computer Vision 129 (2021): 1410-1431.</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/zillow/zind">
+                            Cruz, Steve, et al. "Zillow indoor dataset: Annotated floor plans with 360deg panoramas and 3d room layouts." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://colmap.github.io/">
+                            Schonberger, Johannes L., and Jan-Michael Frahm. "Structure-from-motion revisited." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/abstract/document/7747236">
+                            Cadena, Cesar, et al. "Past, present, and future of simultaneous localization and mapping: Toward the robust-perception age." IEEE Transactions on robotics 32.6 (2016): 1309-1332.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf">
+                        Hutchcroft, Will, et al. "CoVisPose: Co-visibility Pose Transformer for Wide-Baseline Relative Pose Estimation in 360∘ Indoor Panoramas." Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXXII. Cham: Springer Nature Switzerland, 2022.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://arxiv.org/abs/2210.11419"> 
+                            Su, Jheng-Wei, et al. "GPR-Net: Multi-view Layout Estimation via a Geometry-aware Panorama Registration Network." arXiv preprint arXiv:2210.11419 (2022).
+                        </a>
                     </li>
                 </ol>
             </div>
