@@ -102,9 +102,15 @@
                     constraint that has been broadly used in many Computer Vision solutions 
                     like <a href="https://colmap.github.io/">SfM (COLMAP)[6]</a>, and
                     SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[5]</a>, among others.
-                    Still, its use for room layout estimation has been lightly explored until now, i.e., multiple layout estimates from a different position (in the same scene)
-                    must define and complement the same underlined room geometry.
+                    Still, its use for room layout estimation has been lightly explored until now
+                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
+                    <a href="https://arxiv.org/abs/2210.11419"> [9] </a>
+                    <a href="https://enriquesolarte.github.io/360-mlc/">[3]</a>.
+
+                     <!-- i.e., multiple layout estimates from a different position (in the same scene) -->
+                    <!-- must define and complement the same underlined room geometry. -->
                 </p>
+<!-- 
                 <p class="text-justify">
                     Recently, approaches like 
                     <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
@@ -113,21 +119,18 @@
                     proposing important concept like layout Co-visibility which deals
                     with geometry occlusions in a end-to-end formulation. 
                     However, they fall short by considering only a pair of images. 
-                    Solution like <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC [3]</a>
+                    Solution like 
+                    <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC [3]</a>
                     aims to leverage N-multiple views without using any label annotation.
                     However, it needs to pre-process all views in advance before to leverage the multi-view constraint. 
-                    <!-- Lastly, the current largest datasets for layout estimation
-                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
-                    <a href="https://github.com/zillow/zind"> Zillow [5]</a>, present a few views per rooms only, 
-                    without drastic camera movements, with a few non-Manhattan scenes and non-horizontal ceilings, 
-                    which restraint important challenges for estimating a room layout in real-world applications. -->
                     Lastly, the current most extensive datasets for layout estimation 
                     <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
                     <a href="https://github.com/zillow/zind"> Zillow [5]</a>, 
                     present only a few views per room, without drastic camera movements, with a few scenes with non-Manhattan and non-horizontal ceiling architectures.
-                </p>
+                </p> -->
+                
                 <p class="text-justify">
-                    We believe there is still many unseen solutions towards to estimating room layout geometry robustly.
+                    We believe there is still the need for robust solutions to the room layout estimation that leverage multi-view settings robustly and efficiently.
                 </p>
             </div>
         </div>
