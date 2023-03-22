@@ -78,8 +78,8 @@
                 </p>
                 <p class="text-justify">
                     Unlike most existing layout datasets 
-                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
-                    <a href="https://github.com/zillow/zind"> Zillow [5]</a>,
+                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [1]</a>,
+                    <a href="https://github.com/zillow/zind"> Zillow [2]</a>,
                     this challenge provides abundant multi-view images within more complex scenes with larger rooms, 
                     more rooms per scene, and more non-Manhattan spaces, 
                     which brings new challenges for room layout estimation without using labeled data.
@@ -101,16 +101,16 @@
                 <p class="text-justify">
                     Using a multi-view setting offers an accessible and intuitive 
                     constraint that has been broadly used in many Computer Vision solutions 
-                    like <a href="https://colmap.github.io/">SfM (COLMAP)[6]</a>, and
-                    SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[5]</a>, among others.
+                    like <a href="https://colmap.github.io/">SfM (COLMAP)[3]</a>, and
+                    SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[4]</a>, among others.
                     <!-- Still, its use for room layout estimation has been lightly explored until now
                     <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
                     <a href="https://arxiv.org/abs/2210.11419"> [9] </a>
                     <a href="https://enriquesolarte.github.io/360-mlc/">[3]</a>. -->
                     Although significant progress has been made in multi-view layout estimation recently 
-                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
-                    <a href="https://arxiv.org/abs/2210.11419"> [9] </a>
-                    <a href="https://enriquesolarte.github.io/360-mlc/">[3]</a>,
+                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [5]</a>
+                    <a href="https://arxiv.org/abs/2210.11419"> [6] </a>
+                    <a href="https://enriquesolarte.github.io/360-mlc/">[7]</a>,
                     leveraging more than two pairs of views efficiently is still unexplored until now.
                      <!-- i.e., multiple layout estimates from a different position (in the same scene) -->
                     <!-- must define and complement the same underlined room geometry. -->
@@ -151,13 +151,13 @@
                     We include the following two datasets in this competition.
                 </p>
                 <ul>
-                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://github.com/EnriqueSolarte/direct_360_FPE">[1] 360-DFPE</a> with 50 scenes and 687 rooms in total.
+                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a href="https://github.com/EnriqueSolarte/direct_360_FPE">360-DFPE [8]</a> with 50 scenes and 687 rooms in total.
                     <!-- for the purpose of floor plan estimation.  MP3D-FPE contains 50 scenes and 687 rooms in total.   -->
                     <!-- For each scene, it provides the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation.  -->
                         For this competition, only RGB images and their registered camera poses are released. 
                         In total, we include 20k and 2.2k samples for training and testing, respectively.
                     </li>
-                    <li><b>HM3D-MVL</b> is a newly collected dataset using the <a href="https://aihabitat.org/">Habitat [2]</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements. In total, we include
+                    <li><b>HM3D-MVL</b> is a newly collected dataset using the <a href="https://aihabitat.org/">Habitat [9]</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera movements. In total, we include
                         20k and 2.2k samples for training and testing, respectively.
                     </li>
                 </ul>
@@ -212,7 +212,7 @@
                         </li>
                         <li>In total, each person/team is limited up to 3 submissions per day during the challenge phase period.</li>
                         <li>Each person/team has unlimited number of submission during the warm-up phase period.</li>
-                        <li>Freely and publicly available external data is allowed, including pre-trained models, and other datasets</li>
+                        <li>Freely and publicly available external data is allowed, including pre-trained models, and other datasets.</li>
                         <li>There are no limits on training time or network capacity.</li>
                         <li>
                             Participant are required to submit a report of minimum one page long, describing the algorithms,
@@ -220,7 +220,7 @@
                         </li>
                         <li>
                             For more information see 
-                            <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency"> Terms and Conditions</a>
+                            <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency"> Terms and Conditions.</a>
                         </li>
                 </ul>
             </div>
@@ -234,8 +234,10 @@
                 </h3>
                 <ul>
                 <p> 
-                    The first-place winner will receive <span class="bolded">$1.000 (one thousand US dollars)</span> cash prize. 
+                    The first-place winner will receive <strong style="font-size: 16px;">$1.000 (one thousand US dollars)</strong> cash prize. 
                     Please note that only one cash prize will be awarded to each registered team.
+                    For more information see 
+                    <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency"> Terms and Conditions.</a>
                 </p>
                 </ul>
             </div>
@@ -282,21 +284,6 @@
                 </h3>
                 <ol>
                     <li>
-                        <a href="https://github.com/EnriqueSolarte/direct_360_FPE">
-                            Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging Monocular 360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters, 2022.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://aihabitat.org/"> 
-                            Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D. Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF International Conference on Computer Vision, 2019.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://enriquesolarte.github.io/360-mlc/"> 
-                            Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural Information Processing Systems, 2022.
-                        </a>
-                    </li>
-                    <li>
                         <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> 
                             Zou, Chuhang, et al. "Manhattan Room Layout Reconstruction from a Single 360 ∘ 360∘ Image: A Comparative Study of State-of-the-Art Methods." International Journal of Computer Vision 129 (2021): 1410-1431.</a>
                     </li>
@@ -316,6 +303,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="https://enriquesolarte.github.io/360-mlc/"> 
+                            Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural Information Processing Systems, 2022.
+                        </a>
+                    </li>
+                    <li>
                         <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf">
                         Hutchcroft, Will, et al. "CoVisPose: Co-visibility Pose Transformer for Wide-Baseline Relative Pose Estimation in 360∘ Indoor Panoramas." Computer Vision–ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXXII. Cham: Springer Nature Switzerland, 2022.
                         </a>
@@ -323,6 +315,16 @@
                     <li>
                         <a href="https://arxiv.org/abs/2210.11419"> 
                             Su, Jheng-Wei, et al. "GPR-Net: Multi-view Layout Estimation via a Geometry-aware Panorama Registration Network." arXiv preprint arXiv:2210.11419 (2022).
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/EnriqueSolarte/direct_360_FPE">
+                            Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging Monocular 360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters, 2022.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aihabitat.org/"> 
+                            Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D. Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF International Conference on Computer Vision, 2019.
                         </a>
                     </li>
                 </ol>
