@@ -92,7 +92,7 @@
                 <img width="500" height="500" src="https://i.imgur.com/nfQVUUQ.gif" class="img-responsive center-block" alt="overview">
             </div>
         </div>
-
+    <!-- Why multi-view for layout estimation? -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -141,6 +141,7 @@
             </div>
         </div>
 
+    <!-- Dataset -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -167,6 +168,7 @@
             </div>
         </div>
 
+    <!-- Challenge -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -176,41 +178,64 @@
                     <li>Our competition will be held in
                         <a href="https://eval.ai/web/challenges/challenge-page/1906/overview">EvalAI</a>.</li>
                     <li>
-                        Participants will have access to three sets of data: training, warm-up, and challenge set. All sets will be provided in the form of multiple 360-images per room, registered by camera poses, without layout annotations.
+                    Participants will have access to the following data splits: training and testing warm-up, training and testing challenge, and pilot sets. 
+                    All sets will be provided in the form of multiple 360-images per room, registered by camera poses without layout annotations, except for the pilot set.
                     </li>
-                    <li>The warm-up set is composed of 1% of the challenge set. This set will be released for evaluation with unlimited number of submissions.
-                        <li>The challenge set will be released later in the Challenge Phase Open.</li>
-                        <li>We release and evaluate the <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC [3]</a> as a baseline along with the competition. </li>
-                        <li>The winner will be selected by the best average score evaluated on the challenge set. For more details please refer to <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation">Evaluation</a>.</li>
+                    <li>The training and testing warm-up splits will be released the on warm-up phase opening for evaluation in 
+                        <a href="https://eval.ai/web/challenges/challenge-page/1906/overview">EvalAI</a> with unlimited number of submissions.
+                    <li>The training and testing challenge splits will be released later on the challenge phase opening. For this phase, each participant will have limited number of submission per day.</li>
+                    <li>
+                        For reference purpose, We release and evaluate the
+                    <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC</a> and 
+                    <a href="https://sunset1995.github.io/HorizonNet/">HorizonNet</a> 
+                    as baselines within this competition. </li> 
+                    <li>The winner will be selected by the best average score evaluated on the challenge set. For more details please refer to <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation">Evaluation</a>.</li>
                 </ul>
             </div>
         </div>
 
+    <!-- Rules -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Rules
                 </h3>
                 <ul>
-                    <li>To participate in the competition, individuals and teams (unlimited size) should fill out this registration <a href="https://forms.gle/kiAcvdGQbqeRm7xq6">FORM</a>.
-                    This registration aims to track your submission in the EVAL AI server, so we can verify your submission has run without any problem.</li>
+                        <li>To participate in the competition, individuals and teams (unlimited size) should fill out this registration <a href="https://forms.gle/kiAcvdGQbqeRm7xq6">FORM</a>.
+                            This registration aims to track your submission in the EVAL AI server, so we can verify your submission has run without any problem.</li>
                         <li>Anyone can access the datasets and competition, 
                             but only those registered can participate to receive the 
                             official award at the <a href="https://sites.google.com/view/omnicv2023/home?authuser=0"> CVPR23 OmniCV workshop</a>.
-                            The first-place winner will receive USD 1.000,00 in cash. More details in 
-                            <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency"> Terms and Conditions</a> 
-                            </li>
+                            The first-place winner will receive USD 1.000,00 in cash.</li>
                         <li>In total, each person/team is limited up to 3 submissions per day during the challenge period.</li>
                         <li>Each person/team has unlimited number of submission during the warm-up phase period.</li>
                         <li>Freely and publicly available external data is allowed, including pre-trained models, and other datasets</li>
                         <li>There are no limits on training time or network capacity.</li>
-                        <li>Participant are required to submit a report of minim one page long, describing the procedure, algorithms,
-                            and details used in their final submission.
+                        <li>Participant are required to submit a report of minimum one page long, describing the algorithms,
+                            and details of the procedures used in their final submission.
+                        </li>
+                        <li>
+                            More details in 
+                            <a href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency"> Terms and Conditions</a>
                         </li>
                 </ul>
             </div>
         </div>
 
+    <!-- The Prize -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    The Prize
+                </h3>
+                <ul>
+                <p> 
+                    The first-place winner will receive $1.000 (one thousand USA dollars) cash prize.
+                    Please note that only one cash prize will be made to each registered team.
+                </p>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -230,14 +255,17 @@
             </div>
         </div>
 
+    <!-- Community -->
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Community
                 </h3>
+                <p>
                 For public queries, discussion, and free access tutorials please join us in our
-                <a href="https://join.slack.com/t/mvl-challenge/shared_invite/zt-1m95ef0hy-ViG7fSeTt1EqiosRlZoDvQ">Slack workspace</a>. For private queries, please send an email to <br>
-                <span style="font-family: 'Courier New', monospace;">enrique.solarte.nthu@gapp.nthu.edu.tw
+                <a href="https://join.slack.com/t/mvl-challenge/shared_invite/zt-1m95ef0hy-ViG7fSeTt1EqiosRlZoDvQ">Slack workspace</a>. 
+                For private queries, please send an email to <a href="enrique.solarte.nthu@gapp.nthu.edu.tw">enrique.solarte.nthu@gapp.nthu.edu.tw </a>
+                </p>
             </span>
             </div>
         </div>
