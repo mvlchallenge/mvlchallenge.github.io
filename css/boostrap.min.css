@@ -1403,7 +1403,7 @@ html {
 
 body {
     font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1.42857143;
     color: #333333;
     background-color: #ffffff
@@ -1616,7 +1616,8 @@ h2,
 
 h3,
 .h3 {
-    font-size: 26px
+    /* font-size: 26px */
+    font-size: 35px
 }
 
 h4,
@@ -1994,8 +1995,8 @@ pre code {
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px
+    /* padding-left: 15px; */
+    /* padding-right: 15px */
 }
 
 @media (min-width:768px) {
@@ -6092,7 +6093,7 @@ a.thumbnail.active {
 
 .alert>p,
 .alert>ul {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .alert>p+p {
