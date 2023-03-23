@@ -11,7 +11,8 @@
         content="We introduce the first multi-view layout estimation challenge, where the goal is to encourage the community to develop solutions for room layout estimation by using only sequences of registered 360-images as unique input.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="css/boostrap.min.css">
 
     <style>
@@ -61,22 +62,6 @@
 </head>
 
 <body>
-    <!-- <div class="row" style="background-image: url('img/bg.gif'); padding-top: 8%; padding-bottom: 8%;">
-        <h1 class="col-md-12 text-center">
-            <b style="color: white;">Multi-View Layout Challenge</b></br>
-            <small style="color: white;">
-                in conjunction with CVPR'23 OmniCV Workshop
-            </small>
-        </h1>
-    </div> -->
-
-    <!-- <div class="row">
-        <img width="800" height="500" src="https://i.imgur.com/OTfkkl9.gif" class="img-responsive center-block" alt="overview">
-    </div> -->
-
-    <!-- COPY FROM HEREt -->
-
-
     <div class="container" id="main">
         <div class="row">
             <div class="col-md-12 col-md-offset-0">
@@ -103,34 +88,82 @@
                         (OmniCV)</a> workshop at <a href="https://cvpr2023.thecvf.com/">CVPR'23</a>.
                 </p>
                 <!-- <img width="500" height="500" src="img/mvl.gif" class="img-responsive center-block" alt="overview"> -->
-                <img width="500" height="500" src="https://i.imgur.com/nfQVUUQ.gif" class="img-responsive center-block"
-                    alt="overview">
+                <!-- <img width="500" height="500" src="https://i.imgur.com/nfQVUUQ.gif" class="img-responsive center-block"
+                    alt="overview"> -->
+
+                <div class="col-md-10 col-md-offset-1">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-interval="8000">
+                                <video class="img-fluid" autoplay loop muted controls>
+                                    <source src="asset/q3hn1WQ12rz_6.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="carousel-item" data-interval="8000">
+                                <video class="img-fluid" autoplay loop muted controls>
+                                    <source src="asset/kuxpR2xHUBa_3.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="carousel-item" data-interval="8000">
+                                <video class="img-fluid" autoplay loop muted controls>
+                                    <source src="asset/VqCaAuuoeWk_0.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="carousel-item" data-interval="8000">
+                                <video class="img-fluid" autoplay loop muted controls>
+                                    <source src="asset/UQ5EhY5wve1_0.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <div class="carousel-item" data-interval="8000">
+                                <video class="img-fluid" autoplay loop muted controls>
+                                    <source src="asset/UVdNNRcVyV1_4.mp4" type="video/mp4" />
+                                </video>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Why multi-view for layout estimation? -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Why multi-view for layout estimation?
-                </h3>
-                <p class="text-justify">
-                    Using a multi-view setting offers an accessible and intuitive
-                    constraint that has been broadly used in many Computer Vision solutions
-                    like <a href="https://colmap.github.io/">SfM (COLMAP) [3]</a>, and
-                    SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[4]</a>, among others.
-                    <!-- Still, its use for room layout estimation has been lightly explored until now
+            <!-- Why multi-view for layout estimation? -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        Why multi-view for layout estimation?
+                    </h3>
+                    <p class="text-justify">
+                        Using a multi-view setting offers an accessible and intuitive
+                        constraint that has been broadly used in many Computer Vision solutions
+                        like <a href="https://colmap.github.io/">SfM (COLMAP) [3]</a>, and
+                        SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[4]</a>, among others.
+                        <!-- Still, its use for room layout estimation has been lightly explored until now
                     <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
                     <a href="https://arxiv.org/abs/2210.11419"> [9] </a>
                     <a href="https://enriquesolarte.github.io/360-mlc/">[3]</a>. -->
-                    Although significant progress has been made in multi-view layout estimation recently
-                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [5]</a>
-                    <a href="https://arxiv.org/abs/2210.11419"> [6] </a>
-                    <a href="https://enriquesolarte.github.io/360-mlc/">[7]</a>,
-                    leveraging more than two pairs of views efficiently is still unexplored until now.
-                    <!-- i.e., multiple layout estimates from a different position (in the same scene) -->
-                    <!-- must define and complement the same underlined room geometry. -->
-                </p>
-                <!--
+                        Although significant progress has been made in multi-view layout estimation recently
+                        <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [5]</a>
+                        <a href="https://arxiv.org/abs/2210.11419"> [6] </a>
+                        <a href="https://enriquesolarte.github.io/360-mlc/">[7]</a>,
+                        leveraging more than two pairs of views efficiently is still unexplored until now.
+                        <!-- i.e., multiple layout estimates from a different position (in the same scene) -->
+                        <!-- must define and complement the same underlined room geometry. -->
+                    </p>
+                    <!--
                 <p class="text-justify">
                     Recently, approaches like
                     <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
@@ -149,254 +182,288 @@
                     present only a few views per room, without drastic camera movements, with a few scenes with non-Manhattan and non-horizontal ceiling architectures.
                 </p> -->
 
-                <p class="text-justify">
-                    We believe there is still a need for room layout solutions that leverage multi-view settings
-                    robustly and efficiently. Additionally, we assert that an unlabeled multi-view setting
-                    may bring important discussions concerning self-training, self-supervision, domain adaptation, fine
-                    tuning, etc., not only for layout geometries but other geometry tasks too.
-                </p>
+                    <p class="text-justify">
+                        We believe there is still a need for room layout solutions that leverage multi-view settings
+                        robustly and efficiently. Additionally, we assert that an unlabeled multi-view setting
+                        may bring important discussions concerning self-training, self-supervision, domain adaptation,
+                        fine
+                        tuning, etc., not only for layout geometries but other geometry tasks too.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- Dataset -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Dataset
-                </h3>
-                <p class="text-justify">
-                    We include the following two datasets in this competition.
-                </p>
-                <ul>
-                    <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a
-                            href="https://github.com/EnriqueSolarte/direct_360_FPE">360-DFPE [8]</a> with 50 scenes and
-                        687 rooms in total.
-                        <!-- for the purpose of floor plan estimation.  MP3D-FPE contains 50 scenes and 687 rooms in total.   -->
-                        <!-- For each scene, it provides the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation.  -->
-                        For this competition, only RGB images and their registered camera poses are released.
-                        In total, we include 20k and 2.2k samples for training and testing, respectively.
-                    </li>
-                    <li><b>HM3D-MVL</b> is a newly collected dataset using the <a href="https://aihabitat.org/">Habitat
-                            [9]</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect more
-                        realistic camera movements. In total, we include
-                        20k and 2.2k samples for training and testing, respectively.
-                    </li>
-                </ul>
-                <p class="text-justify">
-                    We provide a <a href="https://github.com/mvlchallenge/mvl_toolkit">toolkit</a> to make data
-                    processing easier, allowing participants to
-                    download and use dataset splits, register frames by camera poses, and format
-                    the layout estimation results for the challenge submission.
-                </p>
+            <!-- Dataset -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        Dataset
+                    </h3>
+                    <p class="text-justify">
+                        We include the following two datasets in this competition.
+                    </p>
+                    <ul>
+                        <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a
+                                href="https://github.com/EnriqueSolarte/direct_360_FPE">360-DFPE [8]</a> with 50 scenes
+                            and
+                            687 rooms in total.
+                            <!-- for the purpose of floor plan estimation.  MP3D-FPE contains 50 scenes and 687 rooms in total.   -->
+                            <!-- For each scene, it provides the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation.  -->
+                            For this competition, only RGB images and their registered camera poses are released.
+                            In total, we include 20k and 2.2k samples for training and testing, respectively.
+                        </li>
+                        <li><b>HM3D-MVL</b> is a newly collected dataset using the <a
+                                href="https://aihabitat.org/">Habitat
+                                [9]</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect
+                            more
+                            realistic camera movements. In total, we include
+                            20k and 2.2k samples for training and testing, respectively.
+                        </li>
+                    </ul>
+                    <p class="text-justify">
+                        We provide a <a href="https://github.com/mvlchallenge/mvl_toolkit">toolkit</a> to make data
+                        processing easier, allowing participants to
+                        download and use dataset splits, register frames by camera poses, and format
+                        the layout estimation results for the challenge submission.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- Challenge -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Challenge
-                </h3>
-                <ul>
-                    <li>Our competition will be held in
-                        <a href="https://eval.ai/web/challenges/challenge-page/1906/overview">EvalAI</a>.
-                    </li>
-                    <li>
-                        Participants will have access to the following data: training and testing warm-up, training and
-                        testing challenge, and pilot splits.
-                        All splits will be provided in the form of multiple 360-images per room, registered by camera
-                        poses without layout annotations, except for the pilot split.
-                    </li>
-                    <li>The training and testing warm-up splits will be released on the warm-up phase opening for
-                        evaluation in
-                        <a href="https://eval.ai/web/challenges/challenge-page/1906/overview">EvalAI</a> with unlimited
-                        number of submissions.
-                    <li>
-                        The training and testing challenge splits will be released later on the challenge phase opening.
-                        For this phase, each participant will have limited number of submission per day.
-                    </li>
-                    <li>
-                        For reference purpose, we release and evaluate the
-                        <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC</a> and
-                        <a href="https://sunset1995.github.io/HorizonNet/">HorizonNet</a>
-                        as baselines within this competition.
-                    </li>
-                    <li>The winner will be selected by the best average score evaluated on the challenge set. For more
-                        details please refer to <a
-                            href="https://eval.ai/web/challenges/challenge-page/1906/evaluation">Evaluation</a>.</li>
-                </ul>
+            <!-- Challenge -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        Challenge
+                    </h3>
+                    <ul>
+                        <li>Our competition will be held in
+                            <a href="https://eval.ai/web/challenges/challenge-page/1906/overview">EvalAI</a>.
+                        </li>
+                        <li>
+                            Participants will have access to the following data: training and testing warm-up, training
+                            and
+                            testing challenge, and pilot splits.
+                            All splits will be provided in the form of multiple 360-images per room, registered by
+                            camera
+                            poses without layout annotations, except for the pilot split.
+                        </li>
+                        <li>The training and testing warm-up splits will be released on the warm-up phase opening for
+                            evaluation in
+                            <a href="https://eval.ai/web/challenges/challenge-page/1906/overview">EvalAI</a> with
+                            unlimited
+                            number of submissions.
+                        <li>
+                            The training and testing challenge splits will be released later on the challenge phase
+                            opening.
+                            For this phase, each participant will have limited number of submission per day.
+                        </li>
+                        <li>
+                            For reference purpose, we release and evaluate the
+                            <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC</a> and
+                            <a href="https://sunset1995.github.io/HorizonNet/">HorizonNet</a>
+                            as baselines within this competition.
+                        </li>
+                        <li>The winner will be selected by the best average score evaluated on the challenge set. For
+                            more
+                            details please refer to <a
+                                href="https://eval.ai/web/challenges/challenge-page/1906/evaluation">Evaluation</a>.
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <!-- Rules -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Rules
-                </h3>
-                <ul>
-                    <li>To participate in the competition, individuals and teams (unlimited size) should fill out this
-                        <a href="https://forms.gle/kiAcvdGQbqeRm7xq6" style="color:red;">registration
-                            form</a>.
-                    </li>
-                    <!-- <li>Anyone can access the datasets and competition,
+            <!-- Rules -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        Rules
+                    </h3>
+                    <ul>
+                        <li>To participate in the competition, individuals and teams (unlimited size) should fill out
+                            this
+                            <a href="https://forms.gle/kiAcvdGQbqeRm7xq6" style="color:red;">registration
+                                form</a>.
+                        </li>
+                        <!-- <li>Anyone can access the datasets and competition,
                             but only those registered can participate to receive the
                             official award at the <a href="https://sites.google.com/view/omnicv2023/home?authuser=0"> CVPR23 OmniCV workshop</a>.
                             The first-place winner will receive USD 1.000 in cash.
                         </li> -->
-                    <li>In total, each person/team is limited up to 3 submissions per day during the challenge phase
-                        period.</li>
-                    <li>Each person/team has unlimited number of submission during the warm-up phase period.</li>
-                    <li>Freely and publicly available external data is allowed, including pre-trained models, and other
-                        datasets.</li>
-                    <li>There are no limits on training time or network capacity.</li>
-                    <li>
-                        Participant are required to submit a report of minimum one page long, describing the algorithms,
-                        and details of the procedures used in their final submission.
-                    </li>
-                    <li>
-                        For more information see
-                        <a
-                            href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency">
-                            Terms and Conditions.</a>
-                    </li>
-                </ul>
+                        <li>In total, each person/team is limited up to 3 submissions per day during the challenge phase
+                            period.</li>
+                        <li>Each person/team has unlimited number of submission during the warm-up phase period.</li>
+                        <li>Freely and publicly available external data is allowed, including pre-trained models, and
+                            other
+                            datasets.</li>
+                        <li>There are no limits on training time or network capacity.</li>
+                        <li>
+                            Participant are required to submit a report of minimum one page long, describing the
+                            algorithms,
+                            and details of the procedures used in their final submission.
+                        </li>
+                        <li>
+                            For more information see
+                            <a
+                                href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency">
+                                Terms and Conditions.</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <!-- The Prize -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    The Prize
-                </h3>
-                <ul>
+            <!-- The Prize -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        The Prize
+                    </h3>
+                    <ul>
+                        <p>
+                            The first-place winner will receive a <b>USD 1,000 </b>
+                            prize.
+                            Please note that only one cash prize will be awarded to each registered team.
+                            For more information see
+                            <a
+                                href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency">
+                                Terms and Conditions.</a>
+                        </p>
+                    </ul>
+                </div>
+            </div>
+            <!-- Timeline -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        Timeline
+                    </h3>
+                    <ul>
+                        <!-- <i>(This schedule presents tentative dates only)</i> -->
+                        <li>Competition Begins - <b>March 20, 2023</b> <i></i></li>
+                        <li>Warm-up Phase Opening - <b>March 20, 2023</b></li>
+                        <li>Challenge Phase Opening - <b>May 1, 2023.</b></li>
+                        <li>Challenge Phase Deadline - <b>June 2, 2023</b></li>
+                        <li>Winner informed - <b>June 6, 2023</b></li>
+                        <li>Winner presentation - <b>June 19, 2023</b></li>
+                        <li>All deadlines are at 11:59 PM CST on the corresponding day unless otherwise noted.
+                            The competition organizers reserve the right to update the contest timeline if they deem it
+                            necessary.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Community -->
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        Community
+                    </h3>
                     <p>
-                        The first-place winner will receive a <b>USD 1,000 </b>
-                        prize.
-                        Please note that only one cash prize will be awarded to each registered team.
-                        For more information see
+                        For public queries, discussion, and free access tutorials please join us in our
                         <a
-                            href="https://eval.ai/web/challenges/challenge-page/1906/evaluation#:~:text=Prize%20Details%3A,each%20winner%E2%80%99s%20residency">
-                            Terms and Conditions.</a>
+                            href="https://join.slack.com/t/mvl-challenge/shared_invite/zt-1m95ef0hy-ViG7fSeTt1EqiosRlZoDvQ">Slack
+                            workspace</a>.
+                        For private queries, please send an email to
+                        <a href="mailto:enrique.solarte.nthu@gapp.nthu.edu.tw">enrique.solarte.nthu@gapp.nthu.edu.tw</a>
                     </p>
-                </ul>
+                    </span>
+                </div>
             </div>
-        </div>
-        <!-- Timeline -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Timeline
-                </h3>
-                <ul>
-                    <!-- <i>(This schedule presents tentative dates only)</i> -->
-                    <li>Competition Begins - <b>March 20, 2023</b> <i></i></li>
-                    <li>Warm-up Phase Opening - <b>March 20, 2023</b></li>
-                    <li>Challenge Phase Opening - <b>May 1, 2023.</b></li>
-                    <li>Challenge Phase Deadline - <b>June 2, 2023</b></li>
-                    <li>Winner informed - <b>June 6, 2023</b></li>
-                    <li>Winner presentation - <b>June 19, 2023</b></li>
-                    <li>All deadlines are at 11:59 PM CST on the corresponding day unless otherwise noted.
-                        The competition organizers reserve the right to update the contest timeline if they deem it
-                        necessary.</li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- Community -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Community
-                </h3>
-                <p>
-                    For public queries, discussion, and free access tutorials please join us in our
-                    <a href="https://join.slack.com/t/mvl-challenge/shared_invite/zt-1m95ef0hy-ViG7fSeTt1EqiosRlZoDvQ">Slack
-                        workspace</a>.
-                    For private queries, please send an email to
-                    <a href="mailto: enrique.solarte.nthu@gapp.nthu.edu.tw">enrique.solarte.nthu@gapp.nthu.edu.tw</a>
-                </p>
-                </span>
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0">
+                    <h3>
+                        References
+                    </h3>
+                    <ol>
+                        <li>
+                            <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview" style="font-weight: 500;">
+                                Zou, Chuhang, et al. "Manhattan Room Layout Reconstruction from a Single 360 ∘ 360∘
+                                Image: A
+                                Comparative Study of State-of-the-Art Methods." International Journal of Computer Vision
+                                129
+                                (2021): 1410-1431.</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/zillow/zind" style="font-weight: 500;">
+                                Cruz, Steve, et al. "Zillow indoor dataset: Annotated floor plans with 360deg panoramas
+                                and
+                                3d room layouts." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+                                Recognition. 2021.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://colmap.github.io/" style="font-weight: 500;">
+                                Schonberger, Johannes L., and Jan-Michael Frahm. "Structure-from-motion revisited."
+                                Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/7747236" style="font-weight: 500;">
+                                Cadena, Cesar, et al. "Past, present, and future of simultaneous localization and
+                                mapping:
+                                Toward the robust-perception age." IEEE Transactions on robotics 32.6 (2016): 1309-1332.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://enriquesolarte.github.io/360-mlc/" style="font-weight: 500;">
+                                Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout
+                                Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural
+                                Information
+                                Processing Systems, 2022.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"
+                                style="font-weight: 500;">
+                                Hutchcroft, Will, et al. "CoVisPose: Co-visibility Pose Transformer for Wide-Baseline
+                                Relative Pose Estimation in 360∘ Indoor Panoramas." Computer Vision–ECCV 2022: 17th
+                                European
+                                Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXXII. Cham:
+                                Springer
+                                Nature Switzerland, 2022.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://arxiv.org/abs/2210.11419" style="font-weight: 500;">
+                                Su, Jheng-Wei, et al. "GPR-Net: Multi-view Layout Estimation via a Geometry-aware
+                                Panorama
+                                Registration Network." arXiv preprint arXiv:2210.11419 (2022).
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/EnriqueSolarte/direct_360_FPE" style="font-weight: 500;">
+                                Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging
+                                Monocular
+                                360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters,
+                                2022.
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://aihabitat.org/" style="font-weight: 500;">
+                                Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D.
+                                Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF
+                                International
+                                Conference on Computer Vision, 2019.
+                            </a>
+                        </li>
+                    </ol>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    References
-                </h3>
-                <ol>
-                    <li>
-                        <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview" style="font-weight: 500;">
-                            Zou, Chuhang, et al. "Manhattan Room Layout Reconstruction from a Single 360 ∘ 360∘ Image: A
-                            Comparative Study of State-of-the-Art Methods." International Journal of Computer Vision 129
-                            (2021): 1410-1431.</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/zillow/zind" style="font-weight: 500;">
-                            Cruz, Steve, et al. "Zillow indoor dataset: Annotated floor plans with 360deg panoramas and
-                            3d room layouts." Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
-                            Recognition. 2021.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://colmap.github.io/" style="font-weight: 500;">
-                            Schonberger, Johannes L., and Jan-Michael Frahm. "Structure-from-motion revisited."
-                            Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ieeexplore.ieee.org/abstract/document/7747236" style="font-weight: 500;">
-                            Cadena, Cesar, et al. "Past, present, and future of simultaneous localization and mapping:
-                            Toward the robust-perception age." IEEE Transactions on robotics 32.6 (2016): 1309-1332.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://enriquesolarte.github.io/360-mlc/" style="font-weight: 500;">
-                            Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout
-                            Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural Information
-                            Processing Systems, 2022.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"
-                            style="font-weight: 500;">
-                            Hutchcroft, Will, et al. "CoVisPose: Co-visibility Pose Transformer for Wide-Baseline
-                            Relative Pose Estimation in 360∘ Indoor Panoramas." Computer Vision–ECCV 2022: 17th European
-                            Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part XXXII. Cham: Springer
-                            Nature Switzerland, 2022.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://arxiv.org/abs/2210.11419" style="font-weight: 500;">
-                            Su, Jheng-Wei, et al. "GPR-Net: Multi-view Layout Estimation via a Geometry-aware Panorama
-                            Registration Network." arXiv preprint arXiv:2210.11419 (2022).
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/EnriqueSolarte/direct_360_FPE" style="font-weight: 500;">
-                            Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging Monocular
-                            360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters, 2022.
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://aihabitat.org/" style="font-weight: 500;">
-                            Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D.
-                            Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF International
-                            Conference on Computer Vision, 2019.
-                        </a>
-                    </li>
-                </ol>
-            </div>
+            <br>
+
         </div>
 
-        <br>
-
-    </div>
-
-    <!-- UNTIL HERE -->
-
+        <!-- UNTIL HERE -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <!-- don't mix up the order!!! -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
