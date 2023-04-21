@@ -204,7 +204,12 @@
                 </p>
                 <ul>
                     <li><b>MP3D-FPE</b> is a synthetic dataset proposed in <a
-                            href="https://github.com/EnriqueSolarte/direct_360_FPE">360-DFPE [8]</a> with 50 scenes
+                            href="https://github.com/EnriqueSolarte/direct_360_FPE">360-DFPE [8]</a>,
+                        collected from <a
+                            href="https://niessner.github.io/Matterport/">Matterport3D [9]</a> dataset
+                        using <a
+                            href="https://minosworld.github.io">MINOS [10]</a> simulator, 
+                        with 50 scenes
                         and
                         687 rooms in total.
                         <!-- for the purpose of floor plan estimation.  MP3D-FPE contains 50 scenes and 687 rooms in total.   -->
@@ -212,8 +217,11 @@
                         For this competition, only RGB images and their registered camera poses are released.
                         In total, we include 20k and 2.2k samples for training and testing, respectively.
                     </li>
-                    <li><b>HM3D-MVL</b> is a newly collected dataset using the <a href="https://aihabitat.org/">Habitat
-                            [9]</a> simulator. Similar to MP3D-FPE, we imitate users scanning behavior to collect
+                    <li><b>HM3D-MVL</b> is a newly collected dataset from <a
+                            href="https://aihabitat.org/datasets/hm3d/">HM3D [11]</a> dataset 
+                        using <a
+                            href="https://aihabitat.org/">Habitat [12]</a> simulator.
+                        Similar to MP3D-FPE, we imitate users scanning behavior to collect
                         more
                         realistic camera movements. In total, we include
                         20k and 2.2k samples for training and testing, respectively.
@@ -224,6 +232,11 @@
                     processing easier, allowing participants to
                     download and use dataset splits, register frames by camera poses, and format
                     the layout estimation results for the challenge submission.
+                </p>
+                <p class="text-justify">
+                    Note that the dataset is for non-commercial academic use only, 
+                    and it's under the <a 
+                        href="https://matterport.com/matterport-end-user-license-agreement-academic-use-model-data">Matterport open source license</a>.
                 </p>
             </div>
         </div>
@@ -402,8 +415,8 @@
                     </li>
                     <li>
                         <a href="https://enriquesolarte.github.io/360-mlc/" style="font-weight: 500;">
-                            Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. 360-MLC: Multi-view Layout
-                            Consistency for Self-training and Hyper-parameter Tuning. In Advances in Neural
+                            Solarte, B., Wu, C. H., Liu, Y. C., Tsai, Y. H., & Sun, M. "360-MLC: Multi-view Layout
+                            Consistency for Self-training and Hyper-parameter Tuning." In Advances in Neural
                             Information
                             Processing Systems, 2022.
                         </a>
@@ -428,16 +441,37 @@
                     </li>
                     <li>
                         <a href="https://github.com/EnriqueSolarte/direct_360_FPE" style="font-weight: 500;">
-                            Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. 360-DFPE: Leveraging
+                            Solarte, B., Liu, Y. C., Wu, C. H., Tsai, Y. H., & Sun, M. "360-DFPE: Leveraging
                             Monocular
-                            360-Layouts for Direct Floor Plan Estimation. IEEE Robotics and Automation Letters,
+                            360-Layouts for Direct Floor Plan Estimation." IEEE Robotics and Automation Letters,
                             2022.
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://niessner.github.io/Matterport/" style="font-weight: 500;">
+                            A. Chang, A. Dai, T. Funkhouser, M. Halber, M. Niessner, M. Savva, S. Song, A. Zeng, Y. Zhang.
+                            "Matterport3D: Learning from RGB-D Data in Indoor Environments."
+                            International Conference on 3D Vision (3DV 2017)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://minosworld.github.io" style="font-weight: 500;">
+                            Manolis Savva, Angel X. Chang, Alexey Dosovitskiy, Thomas Funkhouser, Vladlen Koltun.
+                            "MINOS: Multimodal Indoor Simulator for Navigation in Complex Environments."
+                            arXiv:1712.03931 (2017)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aihabitat.org/datasets/hm3d/" style="font-weight: 500;">
+                            Santhosh Kumar Ramakrishnan, et al.
+                            "Habitat-Matterport 3D Dataset (HM3D): 1000 Large-scale 3D Environments for Embodied AI."
+                            Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track, 2021.
                         </a>
                     </li>
                     <li>
                         <a href="https://aihabitat.org/" style="font-weight: 500;">
                             Savva, M., Kadian, A., Maksymets, O., Zhao, Y., Wijmans, E., Jain, B., ... & Batra, D.
-                            Habitat: A Platform for Embodied AI Research. In Proceedings of the IEEE/CVF
+                            "Habitat: A Platform for Embodied AI Research." In Proceedings of the IEEE/CVF
                             International
                             Conference on Computer Vision, 2019.
                         </a>
