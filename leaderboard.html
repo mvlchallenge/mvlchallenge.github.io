@@ -11,14 +11,14 @@
     <tbody>
         <tr>
             <td>1</td>
-            <td>MLC_plus (assoc. VSLab)</td>
+            <td>VSLab (MLC+)</td>
             <td>84.48</td>
             <td>80.83</td>
             <td>82.65</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>MVL_BJTUIIS</td>
+            <td>MVL_BJTUIIS <i class="fa fa-trophy fa-lg" style="color:rgb(243, 179, 90);"></i></td>
             <td>83.75</td>
             <td>80.87</td>
             <td>82.31</td>
@@ -46,34 +46,48 @@
         </tr>
         <tr>
             <td>6</td>
+            <td>VSLab (360-MLC) <span class="badge" style="background-color: rgb(97, 190, 83);">B</span></td>
+            <td>82.10</td>
+            <td>78.38</td>
+            <td>80.24</td>
+        </tr>
+        <tr>
+            <td>7</td>
             <td>LuisC</td>
             <td>80.97</td>
             <td>77.67</td>
             <td>79.32</td>
         </tr>
         <tr>
-            <td>7</td>
+            <td>8</td>
             <td>layout_rookie</td>
             <td>80.03</td>
             <td>76.90</td>
             <td>78.47</td>
         </tr>
         <tr>
-            <td>8</td>
+            <td>9</td>
             <td>Tin</td>
             <td>79.37</td>
             <td>75.97</td>
             <td>77.67</td>
         </tr>
         <tr>
-            <td>9</td>
+            <td>10</td>
             <td>Wiracocha</td>
             <td>78.06</td>
             <td>74.69</td>
             <td>76.38</td>
         </tr>
         <tr>
-            <td>10</td>
+            <td>11</td>
+            <td>VSLab (HorizonNet_MP3D) <span class="badge" style="background-color: rgb(97, 190, 83);">B</span></td>
+            <td>78.03</td>
+            <td>74.68</td>
+            <td>76.36</td>
+        </tr>
+        <tr>
+            <td>12</td>
             <td>Piperrak</td>
             <td>78.03</td>
             <td>74.68</td>
@@ -81,4 +95,18 @@
         </tr>
     </tbody>
 </table>
-<script>let table = new DataTable('#myTable');</script>
+<p></p>
+<p>
+    <span class="badge" style="background-color: rgb(97, 190, 83);">B</span> Baseline &nbsp;&nbsp;
+    <i class="fa fa-trophy fa-lg" style="color:rgb(243, 179, 90);"></i> Winner
+</p>
+<script>
+    $('#myTable').dataTable({
+        "pageLength": 15,
+        "lengthChange": false,
+        "searching": false,
+        "paging": false,
+        "info": false
+    });
+    let table = new DataTable('#myTable');
+</script>

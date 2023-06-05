@@ -15,6 +15,7 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
     <link rel="stylesheet" href="css/boostrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         a {
@@ -35,6 +36,15 @@
             content: "[" counter(list) "] ";
             position: absolute;
             left: -2em;
+        }
+
+        .badge {
+            color: white;
+            padding: 3px 6px;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: 500;
+            font-size: medium;
         }
     </style>
 
@@ -153,37 +163,12 @@
                     constraint that has been broadly used in many Computer Vision solutions
                     like <a href="https://colmap.github.io/">SfM (COLMAP) [3]</a>, and
                     SLAM <a href="https://ieeexplore.ieee.org/abstract/document/7747236">[4]</a>, among others.
-                    <!-- Still, its use for room layout estimation has been lightly explored until now
-                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
-                    <a href="https://arxiv.org/abs/2210.11419"> [9] </a>
-                    <a href="https://enriquesolarte.github.io/360-mlc/">[3]</a>. -->
                     Although significant progress has been made in multi-view layout estimation recently
                     <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [5]</a>
                     <a href="https://arxiv.org/abs/2210.11419"> [6] </a>
                     <a href="https://enriquesolarte.github.io/360-mlc/">[7]</a>,
                     leveraging more than two pairs of views efficiently is still unexplored until now.
-                    <!-- i.e., multiple layout estimates from a different position (in the same scene) -->
-                    <!-- must define and complement the same underlined room geometry. -->
                 </p>
-                <!--
-                <p class="text-justify">
-                    Recently, approaches like
-                    <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136920610.pdf"> [8]</a>
-                    <a href="https://arxiv.org/abs/2210.11419"> [9]</a>
-                    explore around the multi-view idea for layout estimation,
-                    proposing important concept like layout Co-visibility which deals
-                    with geometry occlusions in a end-to-end formulation.
-                    However, they fall short by considering only a pair of images.
-                    Solution like
-                    <a href="https://enriquesolarte.github.io/360-mlc/">360-MLC [3]</a>
-                    aims to leverage N-multiple views without using any label annotation.
-                    However, it needs to pre-process all views in advance before to leverage the multi-view constraint.
-                    Lastly, the current most extensive datasets for layout estimation
-                    <a href="https://cgv.cs.nthu.edu.tw/projects/LayoutReview"> MP3D [4]</a>,
-                    <a href="https://github.com/zillow/zind"> Zillow [5]</a>,
-                    present only a few views per room, without drastic camera movements, with a few scenes with non-Manhattan and non-horizontal ceiling architectures.
-                </p> -->
-
                 <p class="text-justify">
                     We believe there is still a need for room layout solutions that leverage multi-view settings
                     robustly and efficiently. Additionally, we assert that an unlabeled multi-view setting
@@ -191,6 +176,18 @@
                     fine
                     tuning, etc., not only for layout geometries but other geometry tasks too.
                 </p>
+            </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <h3>
+                    Leaderboard
+                </h3>
+                <div class="col-md-10 col-md-offset-1">
+                    <div id="leaderboard"></div>
+                </div>
             </div>
         </div>
 
@@ -208,21 +205,15 @@
                             href="https://github.com/EnriqueSolarte/direct_360_FPE">360-DFPE [8]</a>,
                         collected from <a href="https://niessner.github.io/Matterport/">Matterport3D [9]</a> dataset
                         using <a href="https://minosworld.github.io">MINOS [10]</a> simulator,
-                        with 50 scenes
-                        and
-                        687 rooms in total.
-                        <!-- for the purpose of floor plan estimation.  MP3D-FPE contains 50 scenes and 687 rooms in total.   -->
-                        <!-- For each scene, it provides the point cloud, sequence of panorama images with depth, camera pose information, and the floor plan annotation.  -->
+                        with 50 scenes and 687 rooms in total.
                         For this competition, only RGB images and their registered camera poses are released.
                         In total, we include 20k and 2.2k samples for training and testing, respectively.
                     </li>
                     <li><b>HM3D-MVL</b> is a newly collected dataset from <a
                             href="https://aihabitat.org/datasets/hm3d/">HM3D [11]</a> dataset
                         using <a href="https://aihabitat.org/">Habitat [12]</a> simulator.
-                        Similar to MP3D-FPE, we imitate users scanning behavior to collect
-                        more
-                        realistic camera movements. In total, we include
-                        20k and 2.2k samples for training and testing, respectively.
+                        Similar to MP3D-FPE, we imitate users scanning behavior to collect more realistic camera
+                        movements. In total, we include 20k and 2.2k samples for training and testing, respectively.
                     </li>
                 </ul>
                 <p class="text-justify">
@@ -356,16 +347,6 @@
                         The competition organizers reserve the right to update the contest timeline if they deem it
                         necessary.</li>
                 </ul>
-            </div>
-        </div>
-
-        <!-- Leaderboard -->
-        <div class="row">
-            <div class="col-md-12 col-md-offset-0">
-                <h3>
-                    Leaderboard
-                </h3>
-                <div id="leaderboard"></div>
             </div>
         </div>
 
